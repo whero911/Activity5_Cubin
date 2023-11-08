@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+
+</head>
+<body style="background: #835C3B; text-align: center; margin: 0; padding: 0;">
+    <div class="container" style="background-color: #D2B48C; border-radius: 20px; max-width: 850px; margin: 0 auto;
+            padding: 20px;">
+        <h1>Prediction if the customer is eligible to take a Credit Card or Not. </h1>
+        <form method="POST" action="/predict" style="border-radius: 10px; background-color: #D2B48C; text-align: center;" >
+            <label for="age" style="display: block; margin-bottom: 10px; font-weight: bold">Age:</label>
+            <input type="number" name="age" id="age" step="0.01" required style=""><br><br>
+
+            <label for="experience" style="display: block; margin-bottom: 10px; font-weight: bold">Experience:</label>
+            <input type="number" name="experience" id="experience" step="0.01" required><br><br>
+
+            <label for="income" style="display: block; margin-bottom: 10px; font-weight: bold">Income:</label>
+            <input type="number" name="income" id="income" step="0.01" required><br><br>
+
+            <label for="family" style="display: block; margin-bottom: 10px; font-weight: bold">Family:</label>
+            <input type="number" name="family" id="family" step="0.01" required><br><br>
+
+            <label for="ccavg" style="display: block; margin-bottom: 10px; font-weight: bold">CCAvg:</label>
+            <input type="number" name="ccavg" id="ccavg" step="0.01" required><br><br>
+
+            <label for="education" style="display: block; margin-bottom: 10px; font-weight: bold">Education:</label>
+            <input type="number" name="education" id="education" step="0.01" required><br><br>
+
+            <label for="mortgage" style="display: block; margin-bottom: 10px; font-weight: bold">Mortgage:</label>
+            <input type="number" name="mortgage" id="mortgage" step="0.01" required><br><br>
+
+            <label for="personal_loan" style="display: block; margin-bottom: 10px; font-weight: bold">Personal Loan:</label>
+            <input type="number" name="personal_loan" id="personal_loan" step="0.01" required><br><br>
+
+            <label for="securities_account" style="display: block; margin-bottom: 10px; font-weight: bold">Securities Account:</label>
+            <input type="number" name="securities_account" id="securities_account" step="0.01" required><br><br>
+
+            <label for="cd_account" style="display: block; margin-bottom: 10px; font-weight: bold">CD Account:</label>
+            <input type="number" name="cd_account" id="cd_account" step="0.01" required><br><br>
+
+            <label for="online" style="display: block; margin-bottom: 10px; font-weight: bold">Online:</label>
+            <input type="number" name="online" id="online" step="0.01" required><br><br>
+
+
+            <input type="submit" value="Predict">
+        </form>
+        <br>
+        <br>
+        <div class="prediction-box" style="background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 300px;
+            border-radius: 5px;">
+        <h4 style="margin-top: 20px; color: #000;">{{ prediction }}</h4>
+        </div>
+    </div>
+</body>
+</html>
